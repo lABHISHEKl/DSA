@@ -4,13 +4,16 @@
 int main()
 {
 	int n,a[10],i,j,key;
+	
 	printf("Enter number of elements :: ");
 	scanf("%d",&n);
+	
 	for(i=0;i<n;i++)
 	{
 		printf("Enter element %d :: ",i+1);
 		scanf("%d",&a[i]);
 	}
+	
 	for(i=1;i<n;i++)
 	{
 		key=a[i];
@@ -22,11 +25,13 @@ int main()
 		}
 		a[j+1]=key;
 	}
-	printf("\n\n**Sorted Array**");
+	
+	printf("\n\nSorted Array");
 	for(i=0;i<n;i++)
 	{
-		printf("\n  Element %d :: %d",i+1,a[i]);
+		printf("\n  Element %d : %d",i+1,a[i]);
 	}
+	
 	getch();
 	return 0;
 }
