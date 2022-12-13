@@ -6,16 +6,25 @@ int top=-1;
 void push(int a[],int n)
 {
 	if(top==14)
-	printf("\nSTACK OVERFLOW!!!");
+	{
+		printf("\nSTACK OVERFLOW!!!");
+	}
+	
 	else
-	a[++top]=n;
+	{	
+		a[++top]=n;
+	}
 }
 
 void pop(int a[])
 {
 	int x;
+	
 	if(top==-1)
-	printf("\nSTACK UNDERFLOW!!!");
+	{
+		printf("\nSTACK UNDERFLOW!!!");
+	}
+	
 	else	
 	{
 		x=a[top--];
@@ -26,13 +35,19 @@ void pop(int a[])
 void display(int a[])
 {
 	int i;
+	
 	if(top==-1)
+	{
 	printf("\nSTACK IS EMPTY\n");
+	}
+	
 	else
 	{
 		printf("\nIN STACK");
 		for(i=top;i>=0;i--)
-		printf("\n%d",a[i]);
+		{	
+			printf("\n%d",a[i]);
+		}
 	}
 }
 
@@ -45,21 +60,35 @@ int main()
 	{
 		printf("\nEnter the operation you want to perform");
 		ch=getch();
+		
 		if(ch=='1')
 		{
 			printf("\nEnter the element to push :: ");
 			scanf("%d",&n);
 			push(a,n);
 		}
+		
 		else if(ch=='2')
-		pop(a);
+		{
+			pop(a);
+		}
+		
 		else if(ch=='3')
-		display(a);
+		{	
+			display(a);
+		}
+		
 		else if(ch=='4')
-		break;
+		{	
+			break;
+		}
+		
 		else
-		printf("WRONG CHOICE!!!");
+		{
+			printf("WRONG CHOICE!!!");
+		}
 	}
+	
 	getch();
 	return 0;
 }
